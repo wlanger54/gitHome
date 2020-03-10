@@ -1,10 +1,8 @@
-package ATDTest.Accessories_MainPageTest;
+package ATDTest.Accessories_MainPage;
 
 import AutoDoc.ATD.Accessories_MainPage.MainPage;
 import com.codeborne.selenide.Configuration;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
@@ -13,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class MainPageTest {
 
 
-    @BeforeClass
+    @BeforeMethod
     public void setUp() {
         Configuration.startMaximized = true;
         Configuration.timeout = 1000;
@@ -46,8 +44,7 @@ public class MainPageTest {
 
 
 
-
-    @AfterClass
+    @AfterMethod
     public void turnDown() {
         close();
     }
