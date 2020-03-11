@@ -19,11 +19,10 @@ public class MainPageTest {
     }
 
 
-
     @Test
     public void checkTitleMainPageTest() {
         new MainPage().checkTitleMainPage("KFZ ZUBEHÖR ONLINESHOP")
-                      .checkSubTitleMainPage("Alles für Ihr Auto aus einer Hand");
+                .checkSubTitleMainPage("Alles für Ihr Auto aus einer Hand");
     }
 
 
@@ -39,17 +38,10 @@ public class MainPageTest {
 
     }
 
-
-
-
-
-
     @AfterMethod
     public void turnDown() {
         close();
     }
-
-
 }
 
 
