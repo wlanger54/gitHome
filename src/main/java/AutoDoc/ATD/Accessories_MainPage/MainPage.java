@@ -20,9 +20,11 @@ public class MainPage {
     private SelenideElement divTop_topProducts = $(By.xpath("//ul[@class='accessories-tabs__nav']/li[1]")),
             divTop_topAccessories = $(By.xpath("//ul[@class='accessories-tabs__nav']/li[2]")),
             divTop_topAutoElectronics = $(By.xpath("//ul[@class='accessories-tabs__nav']/li[3]"));
-
     private ElementsCollection divTop_4TopProducts = $$(By.xpath("//div[@class='accessories-tabs__item active']//span[@data-gac='TOP_catalog_accessories']"));
+
     private SelenideElement divTop_4TopProducts_redirectOnListing = $(By.xpath("//div[@class='accessories-tabs__item active']//span[@data-gac='TOP_catalog_accessories'][1]"));
+
+    private SelenideElement titleMainCatalogProducts = $(By.xpath("//h2[@class='accessories-catalog__title']"));
 
 
 
@@ -65,6 +67,11 @@ public class MainPage {
         divTop_4TopProducts_redirectOnListing.click();
         new ListingPage_divTop(). ListingNamePodcategorii.shouldBe(visible);
         return page(ListingPage_divTop.class);
+    }
+
+    public MainPage checkTitleMainCatalogProducts(String expectedText) {
+        titleMainCatalogProducts.shouldHave(text(expectedText));
+        return this;
     }
 
 
