@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class MainPageTest {
 
-
+//Изменил на метод
     @BeforeMethod
     public void setUp() {
         Configuration.startMaximized = true;
@@ -37,11 +37,12 @@ public class MainPageTest {
                 .clickAndRedirectOnListing_DivTop();
 
     }
-
+//Изменил на метод
     @AfterMethod
     public void turnDown() {
         close();
     }
+
 }
 
 
