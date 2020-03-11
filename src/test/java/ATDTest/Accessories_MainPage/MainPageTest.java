@@ -15,14 +15,14 @@ public class MainPageTest {
     public void setUp() {
         Configuration.startMaximized = true;
         Configuration.timeout = 1000;
-        open("https://www.autodoc.de/autozubehoer");
+        open("https://www.auto-doc.at/autozubehoer");
     }
 
 
     @Test
     public void checkTitleMainPageTest() {
-        new MainPage().checkTitleMainPage("KFZ ZUBEHÖR ONLINESHOP")
-                .checkSubTitleMainPage("Alles für Ihr Auto aus einer Hand");
+        new MainPage().checkTitleMainPage("AUTO ACCESSOIRES")
+                .checkSubTitleMainPage("Autozubehör Artikel von namhaften Marken");
     }
 
 
@@ -37,6 +37,16 @@ public class MainPageTest {
                 .clickAndRedirectOnListing_DivTop();
 
     }
+
+
+    @Test
+    public void checkDivMainCatalogProducts() {
+     new MainPage().checkTitleMainCatalogProducts("AUTODOC Kfz Zubehör Katalog");
+    }
+
+
+
+
 
     @AfterMethod
     public void turnDown() {
