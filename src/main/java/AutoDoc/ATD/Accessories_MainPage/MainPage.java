@@ -4,6 +4,7 @@ package AutoDoc.ATD.Accessories_MainPage;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.CollectionCondition.size;
@@ -40,7 +41,6 @@ public class MainPage {
       return this;
 
     }
-
 
 
     public MainPage checkDivTop_topProducts() {
