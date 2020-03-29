@@ -2,7 +2,9 @@ package ATDTest.Accessories_MainPage;
 
 import AutoDoc.ATD.Accessories_MainPage.MainPage;
 import com.codeborne.selenide.Configuration;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
@@ -18,7 +20,7 @@ public class MainPageTest {
         open("https://www.auto-doc.at/autozubehoer");
     }
 
-
+    
     @Test
     public void checkTitleMainPageTest() {
         new MainPage().checkTitleMainPage("AUTO ACCESSOIRES")
