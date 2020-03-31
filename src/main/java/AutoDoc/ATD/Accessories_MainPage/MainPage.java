@@ -25,7 +25,10 @@ public class MainPage {
 
     private SelenideElement divTop_4TopProducts_redirectOnListing = $(By.xpath("//div[@class='accessories-tabs__item active']//span[@data-gac='TOP_catalog_accessories'][1]"));
 
-    private SelenideElement titleMainCatalogProducts = $(By.xpath("//h2[@class='accessories-catalog__title']"));
+    private SelenideElement titleMainCatalogProducts = $(By.xpath("//h2[@class='accessories-catalog__title']")),
+            hoverLO_MainCatalog = $x("//div[@class='accessories-catalog__row'][1]//div[@class='accessories-catalog__group'][1]"),
+            categoryLO_MainCatalog = $x("//div[@data-cat-id='307'][2]//li[1]//a");
+
 
 
 
@@ -65,14 +68,27 @@ public class MainPage {
 
     public ListingPage_divTop clickAndRedirectOnListing_DivTop() {
         divTop_4TopProducts_redirectOnListing.click();
-        new ListingPage_divTop(). ListingNamePodcategorii.shouldBe(visible);
+        new ListingPage_divTop(). getListingNameSubcategory().shouldBe(visible);
         return page(ListingPage_divTop.class);
     }
 
     public MainPage checkTitleMainCatalogProducts(String expectedText) {
-        titleMainCatalogProducts.shouldHave(text(expectedText));
+        titleMainCatalogProducts.shouldHave(text(expectedText)).scrollTo();
         return this;
     }
+
+    public MainPage checkHoverLO_MainCatalog() {
+        actions().moveToElement(hoverLO_MainCatalog).build().perform();
+        return this;
+    }
+
+    public ListingPage_categoryMainCatalog clickAndRedirectOnListingChild_MainCatalog(){
+        categoryLO_MainCatalog.click();
+        new ListingPage_categoryMainCatalog().getTitleListingCategory_MainCatalog().shouldBe(visible);
+        return page(ListingPage_categoryMainCatalog.class);
+    }
+
+
 
 
 

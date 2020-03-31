@@ -43,10 +43,10 @@ public class MainPageTest {
 
     @Test
     public void checkDivMainCatalogProducts() {
-     new MainPage().checkTitleMainCatalogProducts("AUTODOC Kfz Zubehör Katalog");
+     new MainPage().checkTitleMainCatalogProducts("AUTODOC Kfz Zubehör Katalog")
+             .checkHoverLO_MainCatalog()
+             .clickAndRedirectOnListingChild_MainCatalog();
     }
-
-
 
 
 

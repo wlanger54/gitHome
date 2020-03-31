@@ -8,5 +8,12 @@ import static com.codeborne.selenide.Selenide.$;
 public class ListingPage_divTop {
 
 
-    public SelenideElement ListingNamePodcategorii = $(By.xpath("//h2[@class='title_count_search']"));
+    private SelenideElement listingNameCategory = $(By.xpath("//h2[@class='title_count_search']"));
+
+
+    public SelenideElement getListingNameSubcategory() {
+        return listingNameCategory;
+    }
+
+
 }
