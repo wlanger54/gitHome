@@ -50,6 +50,7 @@ public class MainPage {
 
 
 // Блок топ категорий.
+    // проверка связи с гид
 
     public MainPage checkDivTop_topCategories() {
         divTopCategories_topProducts.shouldBe(visible);
