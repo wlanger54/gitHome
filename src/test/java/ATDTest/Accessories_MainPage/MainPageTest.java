@@ -12,9 +12,6 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class MainPageTest {
 
-////////////////////////////////////// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//    %%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
     @BeforeMethod
