@@ -1,6 +1,6 @@
 package ATDTest.Accessories_MainPage;
 
-import AutoDoc.ATD.Accessories_MainPage.MainPage;
+import AutoDoc.ATD.Accessories_MainPage_QASYS_440.MainPage;
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -29,15 +29,14 @@ public class MainPageTest {
 
 
     @Test
-    public void checkDivTopProducts() {
-        new MainPage().checkDivTop_topProducts()
-                .checkDivTop_4TopProducts()
+    public void checkDivTopCategories() {
+        new MainPage().checkDivTop_topCategories()
+                .checkDivTop_4TopCategories()
                 .checkDivTop_topAccessories()
-                .checkDivTop_4TopProducts()
+                .checkDivTop_4TopCategories()
                 .checkDivTop_topAutoElectronics()
-                .checkDivTop_4TopProducts()
+                .checkDivTop_4TopCategories()
                 .clickAndRedirectOnListing_DivTop();
-
     }
 
 
@@ -47,6 +46,16 @@ public class MainPageTest {
              .checkHoverLO_MainCatalog()
              .clickAndRedirectOnListingChild_MainCatalog();
     }
+
+
+    @Test
+    public void checkDivTopProducts(){
+        new MainPage().countTheNumberOfCards(6)
+                .checkHoverCard_DivTopProduct();
+
+    }
+
+
 
 
 

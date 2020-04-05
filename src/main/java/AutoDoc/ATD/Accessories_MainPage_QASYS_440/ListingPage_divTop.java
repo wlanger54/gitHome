@@ -1,4 +1,4 @@
-package AutoDoc.ATD.Accessories_MainPage;
+package AutoDoc.ATD.Accessories_MainPage_QASYS_440;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
