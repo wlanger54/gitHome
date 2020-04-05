@@ -49,7 +49,8 @@ public class MainPage {
     }
 
 
-// Блок топ категорий
+// Блок топ категорий.    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     public MainPage checkDivTop_topCategories() {
         divTopCategories_topProducts.shouldBe(visible);
