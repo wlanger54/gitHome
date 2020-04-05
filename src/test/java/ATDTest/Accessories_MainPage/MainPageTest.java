@@ -12,9 +12,6 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class MainPageTest {
 
-////////////////////////////////////// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//    %%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
     @BeforeMethod
@@ -70,5 +67,10 @@ public class MainPageTest {
 
 }
 
-
+//    @Test
+//    public void checkDivTopProducts(){
+//        new MainPage().countTheNumberOfCards(6)
+//                .checkHoverCard_DivTopProduct();
+//
+//    }
 
