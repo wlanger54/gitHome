@@ -51,8 +51,9 @@ public class MainPageTest {
 
     @Test
     public void checkDivTopProducts(){
-        new MainPage().countTheNumberOfCards(6)
-                .checkHoverCard_DivTopProduct();
+        new MainPage().visibleDivTopProducts()
+                .countTheNumberOfCards(6)
+                .checkHoverDetailsCard_DivTopProduct("Details");
 
     }
 
@@ -67,10 +68,5 @@ public class MainPageTest {
 
 }
 
-//    @Test
-//    public void checkDivTopProducts(){
-//        new MainPage().countTheNumberOfCards(6)
-//                .checkHoverCard_DivTopProduct();
-//
-//    }
+
 
