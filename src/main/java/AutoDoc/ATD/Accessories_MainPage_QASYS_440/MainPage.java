@@ -29,6 +29,7 @@ public class MainPage {
 
     private ElementsCollection divTopProducts_CardProducts = $$x("//div[@class='top-product-block']//div[@class='product-list__item active']");
     private SelenideElement divTopProduct_OneCard = $x("//div[@class='top-product-block']//li[1]//div[@class='product-list__item active']"),
+            divTopProducts = $x("//div[@class='top-product-block']"),
             detailsPopup_CardTopProduct = $x("//div[@class='top-product-block']//li[1]//div[@class='product-list__item active']//span[text()='Details']");
 
 
@@ -99,14 +100,20 @@ public class MainPage {
 
 // Блок Топ продуктов
 
+    public MainPage visibleDivTopProducts(){
+        divTopProducts.scrollTo().shouldBe(visible);
+        return this;
+    }
+
     public MainPage countTheNumberOfCards(int expectedSize){
         divTopProducts_CardProducts.shouldHave(size(expectedSize));
         return this ;
     }
 
-    public MainPage checkHoverCard_DivTopProduct(){
+    public MainPage checkHoverDetailsCard_DivTopProduct(String expectedText){
         actions().moveToElement(divTopProduct_OneCard).build().perform();
-        detailsPopup_CardTopProduct.shouldBe(visible);
+        sleep(2000);
+        detailsPopup_CardTopProduct.shouldHave(text(expectedText));
         return this;
     }
 
