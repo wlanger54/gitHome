@@ -25,7 +25,7 @@ public class MainPage {
 
     private SelenideElement titleMainCatalogProducts = $(By.xpath("//h2[@class='accessories-catalog__title']")),
             hoverLO_MainCatalog = $x("//div[@class='accessories-catalog__row'][1]//div[@class='accessories-catalog__group'][1]"),
-            categoryLO_MainCatalog = $x("//div[@data-cat-id='307'][2]//li[1]//a");
+            categoryLO_MainCatalog = $x("//div[@class='accessories-catalog__categories' and @style='display: block;']//li[1]//a[@href]");
 
     private ElementsCollection divTopProducts_CardProducts = $$x("//div[@class='top-product-block']//div[@class='product-list__item active']");
     private SelenideElement divTopProduct_OneCard = $x("//div[@class='top-product-block']//li[1]//div[@class='product-list__item active']"),
