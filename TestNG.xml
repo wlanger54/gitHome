@@ -6,6 +6,7 @@
     <test name="gitHome">
         <classes>
             <class name="ATDTest.Accessories_MainPage.MainPageTest"/>
+            <class name="ATDTest.TestLoginPassword.TestLogin"/>
         </classes>
     </test>
 
