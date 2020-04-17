@@ -15,7 +15,7 @@ public class MainPage {
            inputEmail = $x("//input[@id='login_top_email']"),
            inputPassword = $x("//input[@name='Password']"),
            buttonLogin = $x("//a[@class='enter submit']"),
-           errorText = $x("//div[@class='txt ']//li");
+           errorText = $x("//div[@id='popup_update']//ul/li");
 
 
 
@@ -40,8 +40,8 @@ public class MainPage {
       return this;
    }
 
-   public MainPage loginToSite(String emailAdress, String password){
-      enterEmail(emailAdress);
+   public MainPage loginToSite(String email, String password){
+      enterEmail(email);
       enterPassword(password);
       clickButton();
       return this;
