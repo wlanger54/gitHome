@@ -3,6 +3,7 @@ package AutoDoc.ATD.Accessories_MainPage_QASYS_440;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.CollectionCondition.size;
@@ -38,11 +39,12 @@ public class MainPage {
 
 // Тайтл
 
+    @Step
     public MainPage checkTitleMainPage(String expectedText){
       titleMainPage.shouldHave(text(expectedText));
       return this;
     }
-
+    @Step
     public MainPage checkSubTitleMainPage(String pieceOfText) {
       subTitleMainPage.shouldHave(text(pieceOfText));
       return this;
