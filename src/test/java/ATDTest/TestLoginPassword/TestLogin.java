@@ -1,6 +1,6 @@
 package ATDTest.TestLoginPassword;
 
-import AutoDoc.LoginPassword.MainPage;
+import AutoDoc.LoginPassword.MainPage_Login;
 import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -27,7 +27,7 @@ public class TestLogin {
 
     @Test
     public void checkLoginAndPassword(){
-        new MainPage().LoginPasswordPopup()
+        new MainPage_Login().LoginPasswordPopup()
                 .loginToSite("Wlanger54", "00000")
                 .getErrorText("Das Feld E-mail muss eine gültige E-Mail-Adresse enthalten.");
    }
@@ -42,7 +42,7 @@ public class TestLogin {
 
     @Test (dataProvider = "data-provider")
     public void myDataProvider(String emailAdress, String password) {
-        new MainPage().LoginPasswordPopup()
+        new MainPage_Login().LoginPasswordPopup()
                 .loginToSite(emailAdress, password)
                 .getErrorText("Das Feld E-mail muss eine gültige E-Mail-Adresse enthalten.");
 
