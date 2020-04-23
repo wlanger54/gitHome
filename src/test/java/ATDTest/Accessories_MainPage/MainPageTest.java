@@ -2,6 +2,7 @@ package ATDTest.Accessories_MainPage;
 
 import AutoDoc.ATD.Accessories_MainPage_QASYS_440.MainPage;
 import com.codeborne.selenide.Configuration;
+import io.qameta.allure.Owner;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -21,8 +22,8 @@ public class MainPageTest {
         open("https://www.auto-doc.at/autozubehoer");
     }
 
-    
     @Test
+    @Owner(value = "Sergey-QA")
     public void checkTitleMainPageTest() {
         new MainPage().checkTitleMainPage("AUTO ACCESSOIRES")
                 .checkSubTitleMainPage("Autozubehör Artikel von namhaften Marken");
