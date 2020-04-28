@@ -54,11 +54,12 @@ public class MainPage {
 
 // Блок топ категорий
 
+    @Step
     public MainPage checkDivTop_topCategories() {
         divTopCategories_topProducts.shouldBe(visible);
         return this;
     }
-
+    @Step
     public MainPage checkDivTop_topAccessories() {
         divTopCategories_topAccessories.click();
         return this;
