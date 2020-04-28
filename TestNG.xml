@@ -3,13 +3,13 @@
 
 <suite name="Default Suite">
     <!-- Default Suite -->
-    <test name="gitHome">
+    <test name="MyHomeWork_SelenideAutomation">
         <classes>
             <class name="ATDTest.Accessories_MainPage.MainPageTest"/>
         </classes>
     </test>
 
-    <!-- gitHome -->
+    <!-- MyHomeWork_SelenideAutomation -->
 
 
 </suite>
